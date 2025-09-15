@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+outline: 3px solid #ffcc00;
+}
+.botao {
+display: inline-block;
+background-color: #004aad;
+color: white;
+padding: 10px 20px;
+margin-top: 15px;
+border-radius: 8px;
+text-decoration: none;
+}
+.botao:hover, .botao:focus {
+background-color: #00337a;
+}
+.controle-texto {
+display: flex;
+gap: 10px;
+margin-bottom: 15px;
+}
+button {
+padding: 5px 10px;
+border-radius: 6px;
+border: none;
+background-color: #004aad;
+color: white;
+cursor: pointer;
+}
+button:hover, button:focus {
+background-color: #00337a;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Acessibilidade na Web</h1>
+</header>
+<main>
+<div class="controle-texto">
+<button onclick="alterarTexto(1)">A+</button>
+<button onclick="alterarTexto(-1)">A-</button>
+<button onclick="resetarTexto()">Resetar</button>
+</div>
+
+
+<h2>Por que a acessibilidade é importante?</h2>
+<p>A acessibilidade digital garante que todas as pessoas, incluindo aquelas com deficiências, consigam acessar e usar sites e aplicativos.</p>
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Accessibility.svg/1024px-Accessibility.svg.png" alt="Ícone de acessibilidade: uma pessoa com braços abertos dentro de um círculo">
+
+
+<h2>Boas práticas</h2>
+<ul>
+<li>Adicionar descrição nas imagens (atributo <code>alt</code>).</li>
+<li>Usar cores com bom contraste.</li>
+<li>Permitir navegação com teclado.</li>
+<li>Organizar o conteúdo em títulos e listas.</li>
+</ul>
+
+
+<a href="#" class="botao">Saiba Mais</a>
+</main>
+
+
+<script>
+let tamanhoBase = 1;
+function alterarTexto(valor) {
+tamanhoBase += valor * 0.1;
+document.body.style.fontSize = tamanhoBase + "rem";
+}
+function resetarTexto() {
+tamanhoBase = 1;
+document.body.style.fontSize = tamanhoBase + "rem";
+}
+</script>
+</body>
+</html>
